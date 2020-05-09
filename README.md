@@ -17,6 +17,6 @@ func main() {
   errorsC.add(err)
   
   //...
-  errorsC.Error() // Returns an string with stack traces and resons for all embedded errors.
+  errorsC.Error() // Returns an string with stack traces and reasons for all embedded errors.
 }
 ```
