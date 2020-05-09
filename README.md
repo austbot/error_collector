@@ -1,4 +1,4 @@
-# Shift
+# Error Collector
 Error Collector. Useful when you want to delay error handling to the end, such as in go routines, data processing pipelines and minor error modes.
 
 ## Install
