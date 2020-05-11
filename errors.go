@@ -36,6 +36,18 @@ func (e *ErrorsCollector) Add(err error) {
   }
 }
 
+func (e *ErrorsCollector) Null() bool {
+  e.Lock()
+  defer e.Unlock()
+  return e.Count() == 0
+}
+
+func (e *ErrorsCollector) Errors() []error {
+  e.Lock()
+  defer e.Unlock()
+  return e.errorSlice
+}
+
 func (e *ErrorsCollector) Error() string {
   var errorMessage string
   e.Lock()
